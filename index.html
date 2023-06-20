@@ -1,44 +1,218 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>Sigma Client Archives</title>
-    <link rel="icon" type="image/x-icon" href="static/img/sigma.png">
-	<link rel="canonical" href="https://www.sigmajello.ga" />
-    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/style.css">
-    <meta content="Sigma Client Archive" property="og:title" />
-    <meta content="An archive of Sigma Client including downloads" property="og:description" />
-    <meta content="https://www.sigmajello.ga" property="og:url" />
-    <meta content="https://raw.githubusercontent.com/SigmaJello/Archive/main/jellologo.png" property="og:image" />
-    <meta content="#ffff" data-react-helmet="true" name="theme-color" />
+  <title>Sigma Client Archives</title>
+  <link rel="icon" type="image/x-icon" href="assets/static/img/bookmark.png">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/static/img/swirl.jpg'); /* Thanks to @visaxslr on Unsplash! */
+  background-size: cover;
+  background-position: center;
+  filter: blur(20px);
+  z-index: -1;
+}
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    .image-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .rectangle-box {
+      width: 600px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .image-button {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 250px;
+      margin: 10px;
+      padding: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #000000;
+      transition: transform 0.3s ease;
+    }
+    
+    .image-button:hover {
+      transform: scale(1.05);
+    }
+    
+    .image-button img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    
+    .dark-mode-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: transparent;
+      border: none;
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 16px;
+      transition: opacity 0.3s ease;
+    }
+    
+    .dark-mode-toggle:hover {
+      opacity: 0.7;
+    }
+    
+    .dark-mode .rectangle-box {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .dark-mode .image-button {
+      color: #ffffff;
+    }
+    
+    .dark-mode .image-button img {
+      filter: brightness(0) invert(1);
+    }
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background-color: #222222;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background-color: #666666;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #888888;
+    }
+    
+    body {
+      background-color: #111111;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .content {
+      width: 400px;
+      height: 200px;
+      overflow-y: scroll;
+      scrollbar-color: #666666 #222222;
+      scrollbar-width: thin;
+      margin: 20px auto;
+    }
+    
+    .content p {
+      margin: 0;
+      padding: 10px;
+      line-height: 1.5;
+    }
+    
+    .advertisement {
+      background-color: #333;
+      padding: 5px;
+      text-align: center;
+    }
+    
+    .advertisement h1 {
+      margin: 0;
+      font-size: 15px;
+    }
+    
+    .advertisement button {
+      background-color: #555;
+      color: #fff;
+      border: none;
+      padding: 10px 21px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    .advertisement button:hover {
+      background-color: #777;
+    }
+  </style>
 </head>
 <body>
-<div class="background-holder">
-    <div class="container-fluid main">
-        <img src="static/img/sigmarchives.png" alt="Sigma logo" class="logo"/>
-        <div class="row justify-content-md-center">
-            <div class="col-lg-3 col-md-5 col-sm-12 gui">
-                <h1>Where next?</h1>
-                <div class="container-fluid">
-                    <div class="row">
-                        <a class="col-6" href="/downloads">
-                            <img src="static/img/download.png" alt="Sigma 5 Jello Website"/><br/>
-                            Downloads
-                        </a>
-                        <a class="col-6" href="https://github.com/SigmaJello/Archive">
-                            <img src="static/img/github.png" alt="Sigma 4 Website"/><br/>
-                            GitHub
-                        </a>
-                    </div>
-                    <div class="row">
-                        <a class="col-6" href="/tutorial">
-                            <img src="static/img/book.png" alt="Sigma Configs"/><br/>
-                            How to Install
-                        </a>
-                        <a class="col-6" href="/discord">
-                            <img src="static/img/discord.png" alt="Sigma Archives Discord Server"/><br/>
-                            Discord
-                        </a>
-</div>
+  <div class="advertisement">
+    <button onclick="window.location.href='https://discord.gg/fnSeUeVxST';">Check out drain.gg, the ultimate platform for managing your online identity!</button>
+  </div>
+  <div class="container">
+        <button class="dark-mode-toggle" onclick="jelloDarkMode()">
+      <img src="assets/static/img/moon_white.png" alt="Toggle Dark Mode" width="50">
+    </button>
+    <div class="image-container">
+      <img src="assets/static/img/sigmarchives.png" alt="Image" width="350">
+    </div>
+    <div class="rectangle-box">
+      <a href="/downloads.html" class="image-button">
+        <img src="assets/static/img/download.png" alt="Downloads">
+        <span>Downloads</span>
+      </a>
+      <a href="https://www.github.com/SigmaJello/Archive" class="image-button">
+        <img src="assets/static/img/github.png" alt="GitHub">
+        <span>GitHub</span>
+      </a>
+      <a href="/tutorial.html" class="image-button">
+        <img src="assets/static/img/book.png" alt="How to Install">
+        <span>How to Install</span>
+      </a>
+      <a href="/discord" class="image-button">
+        <img src="assets/static/img/discord.png" alt="Discord">
+        <span>Discord</span>
+      </a>
+    </div>
+  </div>
+  
+  <script>
+    function jelloDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
 </html>
